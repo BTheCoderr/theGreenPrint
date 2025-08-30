@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1EA463"/>
+      <stop offset="1" stop-color="#0E6B42"/>
+    </linearGradient>
+  </defs>
+  <!-- Grid background subtle -->
+  <rect width="512" height="512" fill="#063116"/>
+  <g opacity="0.08" stroke="#1EA463">
+    <!-- vertical -->
+    <path d="M32 0v512M64 0v512M96 0v512M128 0v512M160 0v512M192 0v512M224 0v512M256 0v512M288 0v512M320 0v512M352 0v512M384 0v512M416 0v512M448 0v512M480 0v512"/>
+    <!-- horizontal -->
+    <path d="M0 32h512M0 64h512M0 96h512M0 128h512M0 160h512M0 192h512M0 224h512M0 256h512M0 288h512M0 320h512M0 352h512M0 384h512M0 416h512M0 448h512M0 480h512"/>
+  </g>
+  <!-- Blueprint rounded square with corner folds -->
+  <g stroke="url(#g)" stroke-width="16" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 124h232a20 20 0 0 1 20 20v224a20 20 0 0 1-20 20H140a20 20 0 0 1-20-20V144a20 20 0 0 1 20-20z"/>
+    <!-- top-left corner fold -->
+    <path d="M120 124h36a16 16 0 0 1 16 16v16"/>
+    <!-- bottom-right corner fold -->
+    <path d="M372 388h-36a16 16 0 0 1-16-16v-16"/>
+  </g>
+  <!-- Sprout mark -->
+  <g transform="translate(256 270)">
+    <!-- stem -->
+    <path d="M0 -10 C 0 40 0 40 -16 60" stroke="url(#g)" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <!-- left leaf -->
+    <path d="M-12 -10 C -72 -18 -88 -64 -44 -84 C -4 -100 6 -38 -12 -10 Z" fill="url(#g)"/>
+    <!-- right leaf -->
+    <path d="M12 -10 C 72 -18 88 -64 44 -84 C 4 -100 -6 -38 12 -10 Z" fill="url(#g)"/>
+    <!-- node -->
+    <circle cx="0" cy="-14" r="8" fill="url(#g)"/>
+  </g>
+</svg>

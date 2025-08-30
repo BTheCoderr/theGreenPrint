@@ -13,6 +13,20 @@ exports.handler = async (event, context) => {
     // Parse the request body
     const formData = JSON.parse(event.body);
     
+    // Check if API key is available
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY environment variable is not set');
+      return {
+        statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS'
+        },
+        body: JSON.stringify({ error: 'Email service not configured' })
+      };
+    }
+    
     // Initialize Resend with API key from environment variable
     const resend = new Resend(process.env.RESEND_API_KEY);
     
