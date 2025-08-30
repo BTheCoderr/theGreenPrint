@@ -34,6 +34,13 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-visual">
+            <div className="hero-logo-section">
+              <img 
+                src="/greenprintlogo.png" 
+                alt="Greenprint Logo" 
+                className="hero-logo"
+              />
+            </div>
             <div className="blueprint-card">
               <div className="blueprint-header">
                 <div className="blueprint-dots">
