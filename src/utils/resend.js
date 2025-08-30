@@ -6,7 +6,7 @@ export const sendContactEmail = async (formData) => {
   try {
     const { data, error } = await resend.emails.send({
       from: 'Greenprint Contact <onboarding@resend.dev>',
-      to: ['hello@greenprintconsulting.com'],
+      to: ['bferrell514@gmail.com'],
       subject: `New Contact Form Submission from ${formData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
