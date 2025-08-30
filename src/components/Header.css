@@ -3,11 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, rgba(30, 61, 26, 0.95), rgba(45, 90, 39, 0.95));
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(45, 90, 39, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -22,7 +23,7 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #2d5a27;
+  color: white;
 }
 
 .logo-icon {
@@ -44,29 +45,33 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
 }
 
 .nav-link:hover {
-  color: #2d5a27;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: -4px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: #2d5a27;
+  background: white;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
 .menu-toggle {
@@ -81,7 +86,7 @@
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: #2d5a27;
+  background: white;
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
@@ -93,10 +98,11 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: linear-gradient(135deg, rgba(30, 61, 26, 0.98), rgba(45, 90, 39, 0.98));
+    backdrop-filter: blur(10px);
     flex-direction: column;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
@@ -115,9 +121,10 @@
   
   .nav-link {
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(45, 90, 39, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     text-align: center;
+    color: white;
   }
   
   .nav-link:last-of-type {

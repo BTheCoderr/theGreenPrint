@@ -13,7 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header-content">
-          <Logo size="medium" variant="dark" />
+          <Logo size="medium" variant="light" />
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <a href="#services" className="nav-link">Services</a>
