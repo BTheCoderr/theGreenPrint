@@ -1,5 +1,9 @@
 .footer {
-  background: linear-gradient(135deg, #063116, #177F4D);
+  background: #063116;
+  background-image: 
+    linear-gradient(rgba(30, 164, 99, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 164, 99, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: white;
   padding: 3rem 0 1rem;
 }
