@@ -31,21 +31,21 @@
 }
 
 .logo-medium .logo-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.logo-medium .logo-text {
-  font-size: 1.5rem;
-}
-
-.logo-large .logo-icon {
   width: 60px;
   height: 60px;
 }
 
+.logo-medium .logo-text {
+  font-size: 1.8rem;
+}
+
+.logo-large .logo-icon {
+  width: 80px;
+  height: 80px;
+}
+
 .logo-large .logo-text {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 /* Color variants */
@@ -69,12 +69,21 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .logo-large .logo-text {
+  .logo-medium .logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logo-medium .logo-text {
     font-size: 1.5rem;
   }
   
+  .logo-large .logo-text {
+    font-size: 1.8rem;
+  }
+  
   .logo-large .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 }
