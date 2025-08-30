@@ -1,14 +1,22 @@
-import { Resend } from 'resend';
+const { Resend } = require('resend');
 
-const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY || 're_haWbYNio_7jTamhhSVX3YNizvRLyCPb7t');
+exports.handler = async (event, context) => {
+  // Only allow POST requests
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      body: JSON.stringify({ error: 'Method not allowed' })
+    };
+  }
 
-export const sendContactEmail = async (formData) => {
   try {
-    // Check if API key is available
-    if (!process.env.REACT_APP_RESEND_API_KEY && !resend) {
-      throw new Error('Email service not configured');
-    }
-
+    // Parse the request body
+    const formData = JSON.parse(event.body);
+    
+    // Initialize Resend with API key from environment variable
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
+    // Send email
     const { data, error } = await resend.emails.send({
       from: 'Greenprint Contact <onboarding@resend.dev>',
       to: ['bferrell514@gmail.com'],
@@ -41,12 +49,37 @@ export const sendContactEmail = async (formData) => {
 
     if (error) {
       console.error('Resend error:', error);
-      throw new Error('Failed to send email');
+      return {
+        statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS'
+        },
+        body: JSON.stringify({ error: 'Failed to send email' })
+      };
     }
 
-    return { success: true, data };
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
+      body: JSON.stringify({ success: true, data })
+    };
+
   } catch (error) {
-    console.error('Email sending error:', error);
-    throw error;
+    console.error('Function error:', error);
+    return {
+      statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
+      body: JSON.stringify({ error: 'Internal server error' })
+    };
   }
 };

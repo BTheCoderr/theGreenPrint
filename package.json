@@ -12,6 +12,9 @@
     "web-vitals": "^3.5.0",
     "resend": "^2.1.0"
   },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { sendContactEmail } from '../utils/resend';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,15 +25,28 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      await sendContactEmail(formData);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        message: ''
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send email');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       // Show fallback message with contact info
