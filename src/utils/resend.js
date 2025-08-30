@@ -1,9 +1,14 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
+const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY || 're_haWbYNio_7jTamhhSVX3YNizvRLyCPb7t');
 
 export const sendContactEmail = async (formData) => {
   try {
+    // Check if API key is available
+    if (!process.env.REACT_APP_RESEND_API_KEY && !resend) {
+      throw new Error('Email service not configured');
+    }
+
     const { data, error } = await resend.emails.send({
       from: 'Greenprint Contact <onboarding@resend.dev>',
       to: ['bferrell514@gmail.com'],

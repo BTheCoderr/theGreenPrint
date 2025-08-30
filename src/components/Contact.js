@@ -36,8 +36,9 @@ const Contact = () => {
         message: ''
       });
     } catch (error) {
-      setSubmitStatus('error');
       console.error('Form submission error:', error);
+      // Show fallback message with contact info
+      setSubmitStatus('fallback');
     } finally {
       setIsSubmitting(false);
     }
@@ -171,9 +172,11 @@ const Contact = () => {
                 </div>
               )}
               
-              {submitStatus === 'error' && (
-                <div className="form-error">
-                  ❌ There was an error sending your message. Please try again or call us directly.
+              {submitStatus === 'fallback' && (
+                <div className="form-fallback">
+                  📧 Email service temporarily unavailable. Please contact us directly:<br/>
+                  <strong>Email:</strong> bferrell514@gmail.com<br/>
+                  <strong>Phone:</strong> (401) 217-9799
                 </div>
               )}
               
