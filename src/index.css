@@ -39,24 +39,24 @@ code {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #1EA463, #0E6B42);
+  background: linear-gradient(135deg, #177F4D, #063116);
   color: white;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0E6B42, #063116);
+  background: linear-gradient(135deg, #063116, #177F4D);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(30, 164, 99, 0.3);
+  box-shadow: 0 8px 25px rgba(23, 127, 77, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #1EA463;
-  border: 2px solid #1EA463;
+  color: #177F4D;
+  border: 2px solid #177F4D;
 }
 
 .btn-secondary:hover {
-  background: #1EA463;
+  background: #177F4D;
   color: white;
 }
 

@@ -34,7 +34,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #2d5a27, #4a7c59);
+  background: linear-gradient(135deg, #177F4D, #063116);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,7 +66,7 @@
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #2d5a27;
+  color: #177F4D;
   line-height: 1;
 }
 
@@ -159,7 +159,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2d5a27, #4a7c59);
+  background: linear-gradient(135deg, #177F4D, #063116);
   color: white;
   display: flex;
   align-items: center;
@@ -171,7 +171,7 @@
 
 .step-content h4 {
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 0.25rem;
 }
 

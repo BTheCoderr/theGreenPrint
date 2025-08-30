@@ -12,7 +12,7 @@
 .contact-info h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 1rem;
 }
 
@@ -57,7 +57,7 @@
 .method-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 0.25rem;
 }
 
@@ -76,7 +76,7 @@
 .contact-cta h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 1rem;
 }
 
@@ -131,8 +131,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #2d5a27;
-  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.1);
+  border-color: #177F4D;
+  box-shadow: 0 0 0 3px rgba(23, 127, 77, 0.1);
 }
 
 .form-group textarea {

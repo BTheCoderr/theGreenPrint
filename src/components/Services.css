@@ -81,7 +81,7 @@
 .service-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 0.25rem;
   line-height: 1.3;
 }
@@ -111,7 +111,7 @@
 }
 
 .service-bullet {
-  color: #2d5a27;
+  color: #177F4D;
   font-weight: bold;
   flex-shrink: 0;
   margin-top: 0.1rem;
@@ -123,14 +123,14 @@
 }
 
 .service-cta {
-  color: #2d5a27;
+  color: #177F4D;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .service-cta:hover {
-  color: #1e3d1a;
+  color: #063116;
 }
 
 .services-cta {
@@ -144,7 +144,7 @@
 .services-cta h3 {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #2d5a27;
+  color: #177F4D;
   margin-bottom: 0.5rem;
 }
 
