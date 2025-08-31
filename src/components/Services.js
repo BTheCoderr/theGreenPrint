@@ -7,43 +7,100 @@ const Services = () => {
       category: "Business Foundations",
       icon: "🏗️",
       items: [
-        "Business Plan Development",
-        "Business Model Design", 
-        "Company Incorporation & Registration Support",
-        "Financial Forecasting & Projections",
-        "Personal Finance for Entrepreneurs"
+        {
+          name: "Business Plan Development",
+          description: "Clear, customized plans that outline your goals, strategy, and financial roadmap."
+        },
+        {
+          name: "Business Model Design",
+          description: "Identify revenue streams, cost structure, and the right model for growth."
+        },
+        {
+          name: "Company Incorporation & Registration Support",
+          description: "Guidance through legal paperwork and registration."
+        },
+        {
+          name: "Financial Forecasting & Projections",
+          description: "Data-driven forecasts to help you plan for sustainability."
+        },
+        {
+          name: "Personal Finance for Entrepreneurs",
+          description: "Practical tools to manage money while building your business."
+        }
       ]
     },
     {
       category: "Technology & Digital Presence",
       icon: "💻",
       items: [
-        "Custom Website Design & Development",
-        "AI-Powered Business Tools",
-        "Brand-Centered Landing Pages", 
-        "Website Maintenance & Security",
-        "Tech Consulting"
+        {
+          name: "Custom Website Design & Development",
+          description: "Professional websites that fit your brand and convert visitors."
+        },
+        {
+          name: "AI-Powered Business Tools",
+          description: "Automatons and intelligent systems to save time and increase efficiency."
+        },
+        {
+          name: "Brand-Centered Landing Pages",
+          description: "High-impact pages to drive leads, sales, or sign-ups."
+        },
+        {
+          name: "Website Maintenance & Security",
+          description: "Keep your site safe, fast, and up to date."
+        },
+        {
+          name: "Tech Consulting",
+          description: "Personalized guidance on tools, integrations, and digital strategies."
+        }
       ]
     },
     {
       category: "Branding & Marketing",
       icon: "🎨",
       items: [
-        "Brand Identity Creation",
-        "Marketing Strategy Development",
-        "Content Creation Strategy",
-        "Pitch Decks & Investor Presentations",
-        "Community Engagement Campaigns"
+        {
+          name: "Brand Identity Creation",
+          description: "Logos, colors, and design systems that make your business stand out."
+        },
+        {
+          name: "Marketing Strategy Development",
+          description: "Roadmaps tailored to reach your target audience."
+        },
+        {
+          name: "Content Creation Strategy",
+          description: "Plans for social media, blogs, and campaigns that drive engagement."
+        },
+        {
+          name: "Pitch Decks & Investor Presentations",
+          description: "Professional decks that tell your story and secure funding."
+        },
+        {
+          name: "Community Engagement Campaigns",
+          description: "Build local presence and connect authentically with customers."
+        }
       ]
     },
     {
       category: "Growth & Long-Term Success",
       icon: "🚀",
       items: [
-        "Scaling Strategies",
-        "Sponsorship & Partnership Strategy", 
-        "Grant & Accelerator Application Support",
-        "Financial Health Checkups"
+        {
+          name: "Scaling Strategies",
+          description: "Systems and tactics to grow without losing focus or quality."
+        },
+        {
+          name: "Sponsorship & Partnership Strategy",
+          description: "Find and secure win-win collaborations."
+        },
+        {
+          name: "Grant & Accelerator Application Support",
+          description: "Guidance and writing support to access funding and programs."
+        },
+        {
+          name: "Financial Health Checkups",
+          description: "Regular reviews to keep your business strong and resilient."
+        }
       ]
     }
   ];
@@ -74,8 +131,13 @@ const Services = () => {
               <ul className="service-list">
                 {service.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="service-item">
-                    <span className="service-bullet">•</span>
-                    {item}
+                    <div className="service-item-content">
+                      <div className="service-item-header">
+                        <span className="service-bullet">•</span>
+                        <span className="service-item-name">{item.name}</span>
+                      </div>
+                      <p className="service-item-description">{item.description}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
