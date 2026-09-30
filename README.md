@@ -1,5 +1,11 @@
 # Greenprint Start Up Consulting
 
+<!-- repo-intro:start -->
+**Project snapshot:** Greenprint Start Up Consulting is a lead-generation site for business foundations, digital presence, branding, and growth services, built around a clear service funnel.
+
+**What it demonstrates:** React · responsive landing-page design · service positioning · contact conversion · Netlify.
+<!-- repo-intro:end -->
+
 A modern, responsive landing page for Greenprint Start Up Consulting built with React.
 
 ## Features
